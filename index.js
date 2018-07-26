@@ -8,7 +8,8 @@ function appendKitten (name) { return kittens.concat(name) }
 function prependKitten (name) { 
   var newKittens; 
   newKittens = kittens; 
-  return [name, ...newKittens] 
+  return newKittens.splice(0, 0, name)
+  //return [name, ...newKittens] 
 }
 
 function removeLastKitten () { return kittens.slice(0, kittens.length -1) }
